@@ -1,0 +1,21 @@
+{
+  "name": "txt2html",
+  "description": "Convert text to html file.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/preset-env": "^7.22.10"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "convert:sample": "node index -i __test__/files/test.txt",
+    "out:sample": "node index -i __test__/files/test.txt -o ./test.html",
+    "test": "npm run build && jest"
+  }
+}
